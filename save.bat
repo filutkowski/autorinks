@@ -33,9 +33,9 @@ iscc "%~dp0setup.iss"
 
 REM === Archiwizacja źródeł i builda ===
 echo [INFO] Tworzę archiwa ZIP...
-powershell Compress-Archive -Path ".\app\" -DestinationPath ".\build\sources.zip"
-powershell Compress-Archive -Path ".\build\" -DestinationPath ".\build.zip"
-powershell Compress-Archive -Path ".\" -DestinationPath ".\dev.zip"
+powershell Compress-Archive -Path ".\app\*" -DestinationPath ".\build\sources.zip" -Force
+powershell Compress-Archive -Path ".\build\*" -DestinationPath ".\build.zip" -Force
+powershell Compress-Archive -Path ".\*" -DestinationPath ".\dev.zip" -Force
 
 REM === Przygotowanie katalogu src do commita ===
 echo [INFO] Przygotowuję katalog src...
