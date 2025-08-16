@@ -5,11 +5,15 @@ DefaultDirName={pf}\Autorinks         ; Domyślny folder instalacji
 DefaultGroupName=Autorinks            ; Nazwa grupy w menu Start
 OutputDir=build\installer             ; Gdzie zapisać instalator
 OutputBaseFilename=autorinks_installer; Nazwa pliku instalatora
-Compression=lzma                      ; Kompresja
+Compression=lzma2                      ; Kompresja
 SolidCompression=yes                  ; Lepsza kompresja
 DisableDirPage=no                     ; Pokazuje wybór folderu
 DisableProgramGroupPage=no            ; Pokazuje wybór skrótów
 WizardStyle=modern                    ; Nowoczesny wygląd instalatora
+ArchitecturesInstallIn64BitMode=x64
+PrivilegesRequired=admin
+AppPublisher=Michał Filutkowski
+AppCopyright=© 2025 Michał Filutkowski
 
 [Files]
 Source: "build\build\main\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
